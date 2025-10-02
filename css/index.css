@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.otf");
+}
+
+/* heading  */
+* {
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  background-image: linear-gradient(
+      to top,
+      rgba(67, 69, 77, 0.52),
+      rgba(34, 33, 34, 0.73)
+    ),
+    url("../images/home/headingImg.jpg");
+  background-size: 100vw 100vh;
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.darkBg {
+  padding: 0%;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-logo {
+  width: 28.125rem;
+  margin-top: 14%;
+}
+
+#tagLine {
+  position: relative;
+  margin-top: 2%;
+  text-align: center;
+  font-size: 20pt;
+  font-family: Inter;
+}
+
+.heading box-icon {
+  size: 6.375rem;
+}
+
+.search-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15pt;
+  background: #81645c8b;
+  color: white;
+  height: 3.125rem;
+  width: 25rem;
+  margin-top: 5%;
+  text-align: center;
+  gap: 10%;
+  border: .1875rem solid #fff6f6;
+  border-radius: 1.875rem;
+  position: relative;
+  font-family: Inter;
+  -webkit-border-radius: 1.875rem;
+  -moz-border-radius: 1.875rem;
+  -ms-border-radius: 1.875rem;
+  -o-border-radius: 1.875rem;
+}
+
+/* bottom navigation  */
+.navigation {
+  width: 100%;
+  height: 4.375rem;
+  background-color: #3e2a24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.activeNavSelect {
+  background-color: #884e3c;
+}
+
+.navSelect {
+  padding-inline: 2.5rem;
+  height: 4.375rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navSelect:hover {
+  background-color: #673b2d;
+}
+
+.navSelect2 {
+  transition: 100ms;
+}
+
+.navSelect3 {
+  transition: 200ms;
+}
+
+.navSelect4 {
+  transition: 300ms;
+}
+
+.navSelect5 {
+  transition: 400ms;
+}
+
+.bottom-part {
+  background-image: url("../images/home/oldbookpaper.jpg");
+  background-size: 100% 100%;
+}
+
+
+/* about us  */
+
+.aboutus-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #beb498aa;
+}
+
+.aboutus {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding-top: 6.25rem;
+}
+
+.about-content-section {
+  float: left;
+  width: 55%;
+}
+
+.about-image-content {
+  float: right;
+  width: 40%;
+}
+
+.about-image-content img {
+  border-radius: .625rem;
+  padding-top: 10%;
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: .625rem;
+  -moz-border-radius: .625rem;
+  -ms-border-radius: .625rem;
+  -o-border-radius: .625rem;
+}
+
+.about-content-section .about-title {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.about-content-section .about-content h3 {
+  margin-top: 1.25rem;
+  color: #5d5d5d;
+  font-size: 1.3em;
+}
+
+.about-content-section .about-content p {
+  margin-top: .625rem;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.aboutbtn {
+  margin-top: 1.875rem;
+  padding: .75rem 2.5rem;
+  background-color: #4f4a40;
+  letter-spacing: .0938rem;
+  font-size: 17pt;
+  color: white;
+  padding: .75rem 1.875rem .75rem 1.875rem;
+  border: .0625rem solid #4f4a40;
+  cursor: pointer;
+}
+
+.aboutbtn:hover {
+  background-color: #673b2d;
+}
+
+.about-content-section .social {
+  margin: 2.5rem .625rem;
+}
+
+.about-content-section .social a {
+  text-decoration: none;
+}
+
+.about-content-section .social svg {
+  padding: 0rem .625rem;
+}
+
+#contact {
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #8c8062ba;
+}
+
+.contact-content-section {
+  position: absolute;
+  padding: 4.375rem 0;
+
+  padding-left: 10%;
+  width: 80%;
+  height: 100%;
+}
+
+.contact-content-section .contact-content-title {
+  font-size: 1.25em;
+}
+
+.contact-content {
+  width: 80%;
+  position: relative;
+  padding-top: 1.875rem;
+}
+
+.contact-content form {
+  display: flex;
+  gap: 7%;
+  flex-wrap: wrap;
+}
+
+.contact-content .input-box {
+  display: flex;
+  position: relative;
+  margin: 1.25rem 0 2.1875rem 0;
+}
+
+.contact-content .w50 {
+  width: 40%;
+}
+
+.contact-content .w100 {
+  width: 60%;
+}
+
+.contact-content .input-box input,
+textarea {
+  width: 100% !important;
+  padding: .3125rem 0;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-bottom: .0625rem solid rgb(0, 0, 0);
+  outline: none;
+  resize: none;
+  background-color: transparent;
+}
+
+.contact-content .input-box textarea {
+  min-height: 7.5rem;
+}
+
+.contact-content .input-box span {
+  position: absolute;
+  left: 0;
+  padding: .3125rem 0;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: rgb(55, 52, 52);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.contact-content .input-box input:focus ~ span,
+textarea:focus ~ span,
+input:valid ~ span,
+textarea:valid ~ span {
+  transform: translateY(-1.25rem);
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: .0625rem;
+  color: #f10d59;
+  -webkit-transform: translateY(-1.25rem);
+  -moz-transform: translateY(-1.25rem);
+  -ms-transform: translateY(-1.25rem);
+  -o-transform: translateY(-1.25rem);
+}
+
+.contact-content .input-box input[type="submit"] {
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  max-width: 12.5rem;
+  padding: .75rem;
+  background-color: #3e2a24;
+}
+
+.contact-content .input-box input[type="submit"]:hover {
+  background-color: #673b2d;
+}
+
+.contact-image-section img {
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+  width: 15%;
+  transition: 0.3s;
+}
+
+.contact-image-section img:hover {
+  width: 20%;
+  right: 8%;
+}
+
+
+
+
+#typing-text {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border-right: .125rem solid #eee; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#typing-text {
+    animation: blink 0.5s step-end infinite;
+}
+
+
+
+
+        
+      
+/* FAQ Section */
+.faq-section {
+  background-color: #f4f4f4;
+  padding: 4rem 1rem;
+  margin: 0;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-container h2 {
+  text-align: center;
+  color: #3e2a24;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.question {
+  margin: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.question:last-child {
+  border-bottom: none;
+}
+
+.question-title {
+  font-weight: 600;
+  color: #3e2a24;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+}
+
+.question-title:hover {
+  color: #673b2d;
+}
+
+.question-title::after {
+  content: "+";
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.question-title.active::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  padding: 0 1rem;
+  background: #f9f9f9;
+  border-left: 4px solid #884e3c;
+  border-radius: 0 0 4px 4px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.answer.show {
+  max-height: 200px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+    

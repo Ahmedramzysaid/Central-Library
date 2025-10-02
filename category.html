@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category page</title>
+    <link rel="stylesheet" href="css/global.css" />
+      <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/sadat.jpg" />
+    <style>
+      .header {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(67, 69, 77, 0.52),
+            rgba(34, 33, 34, 0.73)
+          ),
+          url(images/category/R.jpg);
+      }
+
+      .header-title {
+        color: white;
+        font-size: 55px;
+      }
+
+      .categories {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        margin: 200px 30px;
+      }
+
+      .category {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 150px;
+        margin: 15px;
+        padding: 50px;
+        background-color: rgba(165, 147, 106, 1);
+        border-radius: 10px;
+      }
+
+      .category:hover {
+        background-color: rgb(148, 129, 87);
+        margin-top: -3px;
+        transition: ease-in;
+        transition-duration: 0.4s;
+      }
+
+      .categories a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="responsive/categories.css">
+  </head>
+
+  <body>
+    <header>
+      <nav class="mainNav" id="navbar">
+        <div class="navbar-content" id="navbar-content ">
+          <ul>
+            <a href="./index.html" class="navbar-links">
+              <li>HOME</li>
+            </a>
+            <a href="./aboutus.html" class="navbar-links">
+              <li>ABOUT US</li>
+            </a>
+            <a href="./index.html#contact" class="navbar-links">
+              <li>CONTACT US</li>
+            </a>
+
+            <a href="./category.html" class="navbar-links">
+              <li>CATEGORIES</li>
+            </a>
+          </ul>
+
+          <div class="btns">
+            <div>
+              <a class="btn" href="./login.html" id="login-btn">LOGIN</a>
+            </div>
+            <div>
+              <a class="btn-fill" href="./register.html" id="reg-btn">REGISTER</a>
+            </div>
+          </div>
+        </div>
+        <hr class="nav-divider" />
+      </nav>
+    </header>
+
+    <!-- Category page -->
+
+    <header id="heading">
+      <div class="header">
+        <h2 class="header-title">CATEGORY PAGE</h2>
+      </div>
+    </header>
+
+    <!--categories-->
+    <div class="categories">
+      <a href="./category/technology.html" class="category">
+        <p>Technology</p>
+      </a>
+      <a href="./category/short_stories.html" class="category">
+        <p>Short Stories</p>
+      </a>
+      <a href="./category/self_help.html" class="category">
+        <p>Self-help</p>
+      </a>
+      <a href="./category/science.html" class="category">
+        <p>Science</p>
+      </a>
+      <a href="./category/romance.html" class="category">
+        <p>Romance</p>
+      </a>
+      <a href="./category/maths.html" class="category">
+        <p>Maths</p>
+      </a>
+      <a href="./category/historical_fiction.html" class="category">
+        <p>Historical Fictions</p>
+      </a>
+      <a href="./category/cookbooks_and_food.html" class="category">
+        <p>Cook books and Foods</p>
+      </a>
+      <a href="./category/biology.html" class="category">
+        <p>Biology</p>
+      </a>
+      <a href="./category/adventure _stories.html" class="category">
+        <p>Adventure Stories</p>
+      </a>
+    </div>
+
+   
+    <script src="./js/navbar.js"></script>
+    <script src="./js/response.js"></script>
+  </body>
+</html>

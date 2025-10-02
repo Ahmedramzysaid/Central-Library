@@ -1,0 +1,11 @@
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\bin\Debug\net8.0\CenteralLibrary.Domain.deps.json
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\bin\Debug\net8.0\CenteralLibrary.Domain.dll
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\bin\Debug\net8.0\CenteralLibrary.Domain.pdb
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\obj\Debug\net8.0\CenteralLibrary.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\obj\Debug\net8.0\CenteralLibrary.Domain.AssemblyInfoInputs.cache
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\obj\Debug\net8.0\CenteralLibrary.Domain.AssemblyInfo.cs
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\obj\Debug\net8.0\CenteralLibrary.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\obj\Debug\net8.0\CenteralLibrary.Domain.dll
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\obj\Debug\net8.0\refint\CenteralLibrary.Domain.dll
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\obj\Debug\net8.0\CenteralLibrary.Domain.pdb
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Domain\obj\Debug\net8.0\ref\CenteralLibrary.Domain.dll

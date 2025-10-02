@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="responsive/login_media.css">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/sadat.jpg"/>
+  </head>
+
+  <body>
+    <header>
+      <nav class="mainNav" id="navbar">
+        <div class="navbar-content" id="navbar-content ">
+          <ul>
+            <a href="./index.html" class="navbar-links">
+              <li>HOME</li>
+            </a>
+            <a href="./aboutus.html" class="navbar-links">
+              <li>ABOUT US</li>
+            </a>
+            <a href="./index.html#contact" class="navbar-links">
+              <li>CONTACT US</li>
+            </a>
+
+            <a href="./category.html" class="navbar-links">
+              <li>CATEGORIES</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+     <h1 class="k"></h1>
+      <h2>User sign in</h2>
+      <form action="#">
+        <input
+          class="f_name"
+          type="text"
+          name="fname"
+          id="f_name"
+          placeholder="Username"
+        /><br />
+
+        <input
+          class="f_pwd"
+          type="password"
+          name="pw"
+          id="n_pwd"
+          placeholder="Password"
+        /><br />
+        <div class="dek">
+          <button class="sizn_f" onclick="myfun(event)">Sign in</button>
+          <hr />
+          <button class="btnn_f">
+            <a href="./register.html" class="dfe">Create new account</a>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./js/signin.js"></script>
+    <div class="left-page">
+      <h1>Central library</h1>
+      <p>
+        Our library management system is desigened to<br />
+        provide easy access to books,magazines,journals,<br />
+        frindly interface,you can search for available<br />
+        resources.
+      </p>
+    </div>
+  </body>
+</html>

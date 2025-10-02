@@ -1,0 +1,6 @@
+@CenteralLibrary.Api_HostAddress = http://localhost:5221
+
+GET {{CenteralLibrary.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

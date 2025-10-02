@@ -1,0 +1,32 @@
+@media (max-width: 600px) {
+    * {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .left-page {
+        display: none;
+    }
+    .container {
+        background-color: transparent;
+        width: 100%;
+    }
+    .container h2 {
+        color: #fff;
+    }
+    header .mainNav {
+        background-color: #3e2a24;
+    }
+    header .mainNav .navbar-content ul {
+        display: flex;
+        flex-direction: row;
+    }
+    header .mainNav ul li {
+        font-size: 10px !important;
+    }
+    .container form .dek .btnn_f {
+        width: 100%;
+        margin: 20px auto;
+    }
+}

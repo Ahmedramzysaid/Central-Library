@@ -1,0 +1,133 @@
+/* Colors
+     - #7c5245  -- Primary blue
+     - #f6eac7  -- Secondary purpal
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+/* animation styles */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* Global utility classes */
+.btn {
+  text-decoration: none;
+  border: 1px solid #5e433b;
+  padding: 10px;
+  border-radius: 4px;
+  color: #5e433b;
+  width: 80px;
+  font-size: 14px;
+  text-align: center;
+  background-color: white;
+  /* transition-duration: 400ms; */
+}
+
+.btn:hover {
+  background-color: #5e433b;
+  color: white;
+  transition-duration: 400ms;
+}
+
+.btn-fill {
+  text-decoration: none;
+  border: 1px solid #5e433b;
+  padding: 10px;
+  border-radius: 4px;
+  background: #5e433b;
+  color: aliceblue;
+  width: 80px;
+  font-size: 14px;
+  text-align: center;
+  /* transition-duration: 400ms; */
+}
+
+.btn-fill:hover {
+  transition-duration: 400ms;
+  background-color: #7c5245;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+.flex {
+  display: flex;
+}
+
+/* NAVGATION STYLES */
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: top 0.3s ease-in-out; 
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+
+  padding: 10px 0px;
+  padding: 20px;
+  top: 0;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  transition: ease-in 0.4s;
+}
+
+.nav-divider {
+  align-self: center;
+  opacity: 0.3;
+  width: 60%;
+  color: white;
+}
+
+.navbar-content ul {
+  list-style: none;
+  display: flex;
+  /* margin-right: 20%; */
+}
+.navbar-content ul li {
+  padding: 15px 20px;
+}
+.navbar-content ul li:hover {
+  background-color: #1b1919;
+}
+
+.navbar-content ul a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-content ul li:hover {
+  color: #c9c3c0;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
+.navbar-content div {
+  padding: 0px 5px;
+  display: flex;
+}
+

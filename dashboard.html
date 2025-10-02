@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-book"></i> 
+                    <span data-translate="library-dashboard">Library Dashboard</span></h2>
+                <button id="toggle-sidebar" class="toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <div class="admin-info">
+                    <img src="https://via.placeholder.com/80" alt="Admin Image" class="admin-img">
+                    <div class="admin-details">
+                        <h3>Admin User</h3>
+                        <p>Library Manager</p>
+                    </div>
+                </div>
+                <nav class="sidebar-menu">
+                    <ul>
+                        <li class="active" data-page="dashboard">
+                            <a href="#"><i class="fas fa-tachometer-alt"></i> <span data-translate="overview">Dashboard</span></a>
+                        </li>
+                        <li data-page="books">
+                            <a href="#"><i class="fas fa-book"></i> <span data-translate="books">Books</span></a>
+                        </li>
+                        <li data-page="categories">
+                            <a href="#"><i class="fas fa-tags"></i> <span data-translate="categories">Categories</span></a>
+                        </li>
+                        <li data-page="users">
+                            <a href="#"><i class="fas fa-users"></i> <span data-translate="members">Members</span></a>
+                        </li>
+                        <li data-page="borrowing">
+                            <a href="#"><i class="fas fa-exchange-alt"></i> <span data-translate="borrowing">Borrowing</span></a>
+                        </li>
+                        <li data-page="reports">
+                            <a href="#"><i class="fas fa-chart-bar"></i> <span data-translate="reports">Reports</span></a>
+                        </li>
+                        <li data-page="about-us">
+                            <a href="#"><i class="fas fa-info-circle"></i> <span data-translate="about-us">About Us</span></a>
+                        </li>
+                        <li data-page="settings">
+                            <a href="#"><i class="fas fa-cog"></i> <span data-translate="settings">Settings</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sidebar-footer">
+                <div class="sidebar-actions">
+                    <button id="language-toggle-btn" class="sidebar-action-btn">
+                        <i class="fas fa-globe"></i> <span>En/Ar</span>
+                    </button>
+                    <button id="theme-toggle-btn" class="sidebar-action-btn">
+                        <i class="fas fa-moon"></i> <span data-translate="dark-mode">Dark Mode</span>
+                    </button>
+                </div>
+                <a href="./index.html" id="logout-btn"><i class="fas fa-sign-out-alt"></i> <span data-translate="logout">Logout</span></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="search-container">
+                    <input type="text" data-translate-placeholder="search-books" placeholder="Search..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="message-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">5</span>
+                    </button>
+                    <div class="header-icons">
+                        <button class="language-toggle-icon">
+                            <i class="fas fa-globe"></i>
+                        </button>
+                        <button class="theme-toggle-icon">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Page -->
+            <section id="dashboard" class="page active">
+                <div class="page-header">
+                    <h1 data-translate="overview">Dashboard</h1>
+                    <p data-translate="welcome-dashboard">Welcome to your library dashboard</p>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon books-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 data-translate="total-borrowed">Total Borrowed This Month</h3>
+                            <p class="stat-number">432</p>
+                            <p class="stat-change positive">+12% <span data-translate="from-last-month">from last month</span></p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon users-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 data-translate="active-borrowers">Active Borrowers</h3>
+                            <p class="stat-number">215</p>
+                            <p class="stat-change positive">+5% <span data-translate="from-last-month">from last month</span></p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon borrowed-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 data-translate="total-returns">Total Returns This Month</h3>
+                            <p class="stat-number">387</p>
+                            <p class="stat-change positive">+8% <span data-translate="from-last-month">from last month</span></p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon overdue-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 data-translate="avg-duration">Average Borrowing Duration</h3>
+                            <p class="stat-number">12 <span data-translate="days">days</span></p>
+                            <p class="stat-change negative">-2 <span data-translate="days">days</span> <span data-translate="from-last-month">from last month</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3 data-translate="monthly-activity">Monthly Activity</h3>
+                        </div>
+                        <div class="chart">
+                            <canvas id="borrowingChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3 data-translate="top-books">Top Books</h3>
+                        </div>
+                        <div class="top-books">
+                            <div class="top-book-item">
+                                <div class="book-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="book-details">
+                                    <h4>The Alchemist</h4>
+                                    <p>Paulo Coelho</p>
+                                </div>
+                                <div class="book-stats">
+                                    <p>42 <span data-translate="borrows">borrows</span></p>
+                                    <p class="book-status available" data-translate="available">Available</p>
+                                </div>
+                            </div>
+                            <div class="top-book-item">
+                                <div class="book-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="book-details">
+                                    <h4>1984</h4>
+                                    <p>George Orwell</p>
+                                </div>
+                                <div class="book-stats">
+                                    <p>38 <span data-translate="borrows">borrows</span></p>
+                                    <p class="book-status unavailable" data-translate="borrowed">Borrowed</p>
+                                </div>
+                            </div>
+                            <div class="top-book-item">
+                                <div class="book-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="book-details">
+                                    <h4>To Kill a Mockingbird</h4>
+                                    <p>Harper Lee</p>
+                                </div>
+                                <div class="book-stats">
+                                    <p>35 <span data-translate="borrows">borrows</span></p>
+                                    <p class="book-status available" data-translate="available">Available</p>
+                                </div>
+                            </div>
+                            <div class="top-book-item">
+                                <div class="book-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="book-details">
+                                    <h4>The Great Gatsby</h4>
+                                    <p>F. Scott Fitzgerald</p>
+                                </div>
+                                <div class="book-stats">
+                                    <p>32 <span data-translate="borrows">borrows</span></p>
+                                    <p class="book-status available" data-translate="available">Available</p>
+                                </div>
+                            </div>
+                            <div class="top-book-item">
+                                <div class="book-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="book-details">
+                                    <h4>Pride and Prejudice</h4>
+                                    <p>Jane Austen</p>
+                                </div>
+                                <div class="book-stats">
+                                    <p>30 <span data-translate="borrows">borrows</span></p>
+                                    <p class="book-status available" data-translate="available">Available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <div class="section-header">
+                        <h3 data-translate="recent-activity">Recent Borrowing Activity</h3>
+                    </div>
+                    <div class="activity-table-container">
+                        <table class="activity-table">
+                            <thead>
+                                <tr>
+                                    <th data-translate="member">Member</th>
+                                    <th data-translate="book">Book</th>
+                                    <th data-translate="status">Status</th>
+                                    <th data-translate="date">Date</th>
+                                    <th data-translate="due-date">Due Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://via.placeholder.com/40" alt="User Image">
+                                            <div>
+                                                <p class="user-name">Ahmed Hassan</p>
+                                                <p class="user-email">ahmed@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>The Alchemist</td>
+                                    <td><span class="status borrowed" data-translate="borrowed">Borrowed</span></td>
+                                    <td>2023-03-01</td>
+                                    <td>2023-03-15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://via.placeholder.com/40" alt="User Image">
+                                            <div>
+                                                <p class="user-name">Fatima Ali</p>
+                                                <p class="user-email">fatima@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>1984</td>
+                                    <td><span class="status returned" data-translate="returned">Returned</span></td>
+                                    <td>2023-02-28</td>
+                                    <td>2023-03-14</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://via.placeholder.com/40" alt="User Image">
+                                            <div>
+                                                <p class="user-name">Mohammed Khalid</p>
+                                                <p class="user-email">mohammed@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>To Kill a Mockingbird</td>
+                                    <td><span class="status borrowed" data-translate="borrowed">Borrowed</span></td>
+                                    <td>2023-02-27</td>
+                                    <td>2023-03-13</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://via.placeholder.com/40" alt="User Image">
+                                            <div>
+                                                <p class="user-name">Layla Ibrahim</p>
+                                                <p class="user-email">layla@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>The Great Gatsby</td>
+                                    <td><span class="status overdue" data-translate="overdue">Overdue</span></td>
+                                    <td>2023-02-15</td>
+                                    <td>2023-03-01</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://via.placeholder.com/40" alt="User Image">
+                                            <div>
+                                                <p class="user-name">Omar Farooq</p>
+                                                <p class="user-email">omar@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Pride and Prejudice</td>
+                                    <td><span class="status returned" data-translate="returned">Returned</span></td>
+                                    <td>2023-02-25</td>
+                                    <td>2023-03-11</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Books Page -->
+            <section id="books" class="page">
+                <div class="page-header">
+                    <h1 data-translate="books-management">Books Management</h1>
+                    <button class="add-btn" id="add-book-btn"><i class="fas fa-plus"></i> <span data-translate="add-book">Add Book</span></button>
+                </div>
+
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label for="category-filter" data-translate="category">Category:</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="fiction" data-translate="fiction">Fiction</option>
+                            <option value="science" data-translate="science">Science</option>
+                            <option value="history" data-translate="history">History</option>
+                            <option value="philosophy" data-translate="philosophy">Philosophy</option>
+                            <option value="psychology" data-translate="psychology">Psychology</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="status-filter" data-translate="status">Status:</label>
+                        <select id="status-filter" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="available" data-translate="available">Available</option>
+                            <option value="borrowed" data-translate="borrowed">Borrowed</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-by" data-translate="sort-by">Sort by:</label>
+                        <select id="sort-by" class="filter-select">
+                            <option value="title" data-translate="book-title">Title</option>
+                            <option value="author" data-translate="author">Author</option>
+                            <option value="date" data-translate="date-added">Date Added</option>
+                            <option value="popularity">Popularity</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="books-container">
+                    <table class="books-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="select-all-books">
+                                </th>
+                                <th data-translate="book-title">Title</th>
+                                <th data-translate="author">Author</th>
+                                <th data-translate="category">Category</th>
+                                <th data-translate="reference-number">Reference Number</th>
+                                <th data-translate="status">Status</th>
+                                <th data-translate="date-added">Date Added</th>
+                                <th data-translate="actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="book-checkbox"></td>
+                                <td>The Alchemist</td>
+                                <td>Paulo Coelho</td>
+                                <td data-translate="fiction">Fiction</td>
+                                <td>FIC-001</td>
+                                <td><span class="status available" data-translate="available">Available</span></td>
+                                <td>2023-01-15</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="book-checkbox"></td>
+                                <td>1984</td>
+                                <td>George Orwell</td>
+                                <td data-translate="fiction">Fiction</td>
+                                <td>FIC-002</td>
+                                <td><span class="status borrowed" data-translate="borrowed">Borrowed</span></td>
+                                <td>2023-01-18</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="book-checkbox"></td>
+                                <td>To Kill a Mockingbird</td>
+                                <td>Harper Lee</td>
+                                <td data-translate="fiction">Fiction</td>
+                                <td>FIC-003</td>
+                                <td><span class="status available" data-translate="available">Available</span></td>
+                                <td>2023-01-20</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="book-checkbox"></td>
+                                <td>A Brief History of Time</td>
+                                <td>Stephen Hawking</td>
+                                <td data-translate="science">Science</td>
+                                <td>SCI-001</td>
+                                <td><span class="status available" data-translate="available">Available</span></td>
+                                <td>2023-01-22</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="book-checkbox"></td>
+                                <td>The Social Contract</td>
+                                <td>Jean-Jacques Rousseau</td>
+                                <td data-translate="philosophy">Philosophy</td>
+                                <td>PHIL-001</td>
+                                <td><span class="status borrowed" data-translate="borrowed">Borrowed</span></td>
+                                <td>2023-01-25</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="book-checkbox"></td>
+                                <td>The 7 Habits of Highly Effective People</td>
+                                <td>Stephen Covey</td>
+                                <td data-translate="self-help">Self-Help</td>
+                                <td>SELF-001</td>
+                                <td><span class="status available" data-translate="available">Available</span></td>
+                                <td>2023-01-28</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="book-checkbox"></td>
+                                <td>The Art of War</td>
+                                <td>Sun Tzu</td>
+                                <td data-translate="history">History</td>
+                                <td>HIST-001</td>
+                                <td><span class="status available" data-translate="available">Available</span></td>
+                                <td>2023-01-30</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                        <span class="pagination-ellipsis">...</span>
+                        <button class="pagination-number">10</button>
+                    </div>
+                    <button class="pagination-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <!-- Categories Page -->
+            <section id="categories" class="page">
+                <div class="page-header">
+                    <h1 data-translate="categories-management">Categories Management</h1>
+                    <button class="add-btn" id="add-category-btn"><i class="fas fa-plus"></i> <span data-translate="add-category">Add Category</span></button>
+                </div>
+
+                <div class="categories-overview">
+                    <div class="category-stats-container">
+                        <div class="category-stat-card">
+                            <div class="category-icon fiction-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="category-details">
+                                <h3 data-translate="fiction">Fiction</h3>
+                                <p class="category-count">245 <span data-translate="books">books</span></p>
+                                <div class="category-progress">
+                                    <div class="progress-bar" style="width: 35%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-stat-card">
+                            <div class="category-icon science-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="category-details">
+                                <h3 data-translate="science">Science</h3>
+                                <p class="category-count">156 <span data-translate="books">books</span></p>
+                                <div class="category-progress">
+                                    <div class="progress-bar" style="width: 22%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-stat-card">
+                            <div class="category-icon history-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <div class="category-details">
+                                <h3 data-translate="history">History</h3>
+                                <p class="category-count">132 <span data-translate="books">books</span></p>
+                                <div class="category-progress">
+                                    <div class="progress-bar" style="width: 19%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-stat-card">
+                            <div class="category-icon philosophy-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="category-details">
+                                <h3 data-translate="philosophy">Philosophy</h3>
+                                <p class="category-count">87 <span data-translate="books">books</span></p>
+                                <div class="category-progress">
+                                    <div class="progress-bar" style="width: 12%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-stat-card">
+                            <div class="category-icon psychology-icon">
+                                <i class="fas fa-head-side-brain"></i>
+                            </div>
+                            <div class="category-details">
+                                <h3 data-translate="psychology">Psychology</h3>
+                                <p class="category-count">98 <span data-translate="books">books</span></p>
+                                <div class="category-progress">
+                                    <div class="progress-bar" style="width: 14%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-stat-card">
+                            <div class="category-icon self-help-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="category-details">
+                                <h3 data-translate="self-help">Self-Help</h3>
+                                <p class="category-count">72 <span data-translate="books">books</span></p>
+                                <div class="category-progress">
+                                    <div class="progress-bar" style="width: 10%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-chart-container">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h3 data-translate="category-distribution">Category Distribution</h3>
+                            </div>
+                            <div class="chart">
+                                <canvas id="categoryDistributionChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="categories-container">
+                    <div class="filter-container">
+                        <div class="filter-group">
+                            <label for="category-sort-by" data-translate="sort-by">Sort by:</label>
+                            <select id="category-sort-by" class="filter-select">
+                                <option value="name">Name</option>
+                                <option value="books">Book Count</option>
+                                <option value="popularity">Popularity</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="category-search" data-translate="search">Search:</label>
+                            <input type="text" id="category-search" class="filter-input" placeholder="Search categories...">
+                        </div>
+                    </div>
+
+                    <table class="categories-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="select-all-categories">
+                                </th>
+                                <th data-translate="category">Category</th>
+                                <th data-translate="description">Description</th>
+                                <th data-translate="book-count">Book Count</th>
+                                <th data-translate="borrow-count">Borrow Count</th>
+                                <th data-translate="date-added">Date Added</th>
+                                <th data-translate="actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="category-checkbox"></td>
+                                <td>
+                                    <div class="category-name">
+                                        <span class="category-icon"><i class="fas fa-book"></i></span>
+                                        <span data-translate="fiction">Fiction</span>
+                                    </div>
+                                </td>
+                                <td>Novels, short stories, and other fictional narratives</td>
+                                <td>245</td>
+                                <td>180</td>
+                                <td>2023-01-10</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="category-checkbox"></td>
+                                <td>
+                                    <div class="category-name">
+                                        <span class="category-icon"><i class="fas fa-flask"></i></span>
+                                        <span data-translate="science">Science</span>
+                                    </div>
+                                </td>
+                                <td>Scientific publications, research papers, and educational materials</td>
+                                <td>156</td>
+                                <td>95</td>
+                                <td>2023-01-12</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="category-checkbox"></td>
+                                <td>
+                                    <div class="category-name">
+                                        <span class="category-icon"><i class="fas fa-landmark"></i></span>
+                                        <span data-translate="history">History</span>
+                                    </div>
+                                </td>
+                                <td>Historical accounts, biographies, and cultural studies</td>
+                                <td>132</td>
+                                <td>78</td>
+                                <td>2023-01-15</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="category-checkbox"></td>
+                                <td>
+                                    <div class="category-name">
+                                        <span class="category-icon"><i class="fas fa-brain"></i></span>
+                                        <span data-translate="philosophy">Philosophy</span>
+                                    </div>
+                                </td>
+                                <td>Philosophical works, essays, and theoretical discussions</td>
+                                <td>87</td>
+                                <td>45</td>
+                                <td>2023-01-18</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="category-checkbox"></td>
+                                <td>
+                                    <div class="category-name">
+                                        <span class="category-icon"><i class="fas fa-head-side-brain"></i></span>
+                                        <span data-translate="psychology">Psychology</span>
+                                    </div>
+                                </td>
+                                <td>Psychological studies, self-improvement, and mental health resources</td>
+                                <td>98</td>
+                                <td>65</td>
+                                <td>2023-01-20</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="category-checkbox"></td>
+                                <td>
+                                    <div class="category-name">
+                                        <span class="category-icon"><i class="fas fa-hand-holding-heart"></i></span>
+                                        <span data-translate="self-help">Self-Help</span>
+                                    </div>
+                                </td>
+                                <td>Personal development, motivation, and self-improvement guides</td>
+                                <td>72</td>
+                                <td>60</td>
+                                <td>2023-01-22</td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                    </div>
+                    <button class="pagination-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <!-- Users Page -->
+            <section id="users" class="page">
+                <div class="page-header">
+                    <h1 data-translate="members-management">Members Management</h1>
+                    <button class="add-btn" id="add-user-btn"><i class="fas fa-plus"></i> <span data-translate="add-member">Add Member</span></button>
+                </div>
+
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label for="user-type-filter" data-translate="member-type">Member Type:</label>
+                        <select id="user-type-filter" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="student" data-translate="student">Student</option>
+                            <option value="teacher" data-translate="teacher">Teacher</option>
+                            <option value="staff" data-translate="staff">Staff</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="user-status-filter" data-translate="status">Status:</label>
+                        <select id="user-status-filter" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="user-sort-by" data-translate="sort-by">Sort by:</label>
+                        <select id="user-sort-by" class="filter-select">
+                            <option value="name">Name</option>
+                            <option value="date" data-translate="join-date">Join Date</option>
+                            <option value="borrowings">Borrowings</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="users-container">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="select-all-users">
+                                </th>
+                                <th data-translate="member">Member</th>
+                                <th data-translate="email">Email</th>
+                                <th data-translate="phone">Phone</th>
+                                <th data-translate="member-type">Member Type</th>
+                                <th data-translate="join-date">Join Date</th>
+                                <th data-translate="status">Status</th>
+                                <th data-translate="actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="user-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Ahmed Hassan</p>
+                                    </div>
+                                </td>
+                                <td>ahmed@example.com</td>
+                                <td>0123456789</td>
+                                <td data-translate="student">Student</td>
+                                <td>2023-01-15</td>
+                                <td><span class="status active">Active</span></td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="user-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Fatima Ali</p>
+                                    </div>
+                                </td>
+                                <td>fatima@example.com</td>
+                                <td>0123456790</td>
+                                <td data-translate="teacher">Teacher</td>
+                                <td>2023-01-18</td>
+                                <td><span class="status active">Active</span></td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="user-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Mohammed Khalid</p>
+                                    </div>
+                                </td>
+                                <td>mohammed@example.com</td>
+                                <td>0123456791</td>
+                                <td data-translate="student">Student</td>
+                                <td>2023-01-20</td>
+                                <td><span class="status active">Active</span></td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="user-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Layla Ibrahim</p>
+                                    </div>
+                                </td>
+                                <td>layla@example.com</td>
+                                <td>0123456792</td>
+                                <td data-translate="student">Student</td>
+                                <td>2023-01-22</td>
+                                <td><span class="status inactive">Inactive</span></td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="user-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Omar Farooq</p>
+                                    </div>
+                                </td>
+                                <td>omar@example.com</td>
+                                <td>0123456793</td>
+                                <td data-translate="staff">Staff</td>
+                                <td>2023-01-25</td>
+                                <td><span class="status active">Active</span></td>
+                                <td class="actions">
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                        <span class="pagination-ellipsis">...</span>
+                        <button class="pagination-number">8</button>
+                    </div>
+                    <button class="pagination-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <!-- Borrowing Page -->
+            <section id="borrowing" class="page">
+                <div class="page-header">
+                    <h1 data-translate="borrowing-management">Borrowing Management</h1>
+                    <button class="add-btn" id="add-borrowing-btn"><i class="fas fa-plus"></i> <span data-translate="new-loan">New Loan</span></button>
+                </div>
+
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label for="borrowing-status-filter" data-translate="status">Status:</label>
+                        <select id="borrowing-status-filter" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="borrowed" data-translate="borrowed">Borrowed</option>
+                            <option value="returned" data-translate="returned">Returned</option>
+                            <option value="overdue" data-translate="overdue">Overdue</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="borrowing-date-filter" data-translate="borrow-date">Borrow Date:</label>
+                        <input type="date" id="borrowing-date-filter" class="filter-input">
+                    </div>
+                    <div class="filter-group">
+                        <label for="borrowing-sort-by" data-translate="sort-by">Sort by:</label>
+                        <select id="borrowing-sort-by" class="filter-select">
+                            <option value="date" data-translate="date">Date</option>
+                            <option value="due-date" data-translate="due-date">Due Date</option>
+                            <option value="user" data-translate="member">Member</option>
+                            <option value="book" data-translate="book">Book</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="borrowing-container">
+                    <table class="borrowing-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="select-all-borrowings">
+                                </th>
+                                <th data-translate="member">Member</th>
+                                <th data-translate="book">Book</th>
+                                <th data-translate="borrow-date">Borrow Date</th>
+                                <th data-translate="due-date">Due Date</th>
+                                <th data-translate="return-date">Return Date</th>
+                                <th data-translate="status">Status</th>
+                                <th data-translate="actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="borrowing-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Ahmed Hassan</p>
+                                    </div>
+                                </td>
+                                <td>The Alchemist</td>
+                                <td>2023-03-01</td>
+                                <td>2023-03-15</td>
+                                <td>-</td>
+                                <td><span class="status borrowed" data-translate="borrowed">Borrowed</span></td>
+                                <td class="actions">
+                                    <button class="action-btn return-btn"><i class="fas fa-undo"></i></button>
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="borrowing-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Fatima Ali</p>
+                                    </div>
+                                </td>
+                                <td>1984</td>
+                                <td>2023-02-28</td>
+                                <td>2023-03-14</td>
+                                <td>2023-03-10</td>
+                                <td><span class="status returned" data-translate="returned">Returned</span></td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="borrowing-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Mohammed Khalid</p>
+                                    </div>
+                                </td>
+                                <td>To Kill a Mockingbird</td>
+                                <td>2023-02-27</td>
+                                <td>2023-03-13</td>
+                                <td>-</td>
+                                <td><span class="status borrowed" data-translate="borrowed">Borrowed</span></td>
+                                <td class="actions">
+                                    <button class="action-btn return-btn"><i class="fas fa-undo"></i></button>
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="borrowing-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Layla Ibrahim</p>
+                                    </div>
+                                </td>
+                                <td>The Great Gatsby</td>
+                                <td>2023-02-15</td>
+                                <td>2023-03-01</td>
+                                <td>-</td>
+                                <td><span class="status overdue" data-translate="overdue">Overdue</span></td>
+                                <td class="actions">
+                                    <button class="action-btn return-btn"><i class="fas fa-undo"></i></button>
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="borrowing-checkbox"></td>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://via.placeholder.com/40" alt="User Image">
+                                        <p>Omar Farooq</p>
+                                    </div>
+                                </td>
+                                <td>Pride and Prejudice</td>
+                                <td>2023-02-25</td>
+                                <td>2023-03-11</td>
+                                <td>2023-03-09</td>
+                                <td><span class="status returned" data-translate="returned">Returned</span></td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                        <span class="pagination-ellipsis">...</span>
+                        <button class="pagination-number">6</button>
+                    </div>
+                    <button class="pagination-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <!-- Reports Page -->
+            <section id="reports" class="page">
+                <div class="page-header">
+                    <h1 data-translate="reports">Reports</h1>
+                </div>
+
+                <div class="report-tabs">
+                    <button class="report-tab active" data-tab="monthly" data-translate="monthly">Monthly</button>
+                    <button class="report-tab" data-tab="category" data-translate="category">Category</button>
+                    <button class="report-tab" data-tab="member" data-translate="member">Member</button>
+                </div>
+
+                <div class="report-content active" id="monthly-report">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3 data-translate="monthly-activity">Monthly Activity</h3>
+                        </div>
+                        <div class="chart">
+                            <canvas id="monthlyActivityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-content" id="category-report">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3 data-translate="category-distribution">Category Distribution</h3>
+                        </div>
+                        <div class="chart">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-content" id="member-report">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3 data-translate="member-distribution">Member Distribution</h3>
+                        </div>
+                        <div class="chart">
+                            <canvas id="memberDistributionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon overdue-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 data-translate="overdue-books">Overdue Books</h3>
+                            <p class="stat-number">24</p>
+                            <p class="stat-info">Total value: $480</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon books-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 data-translate="popular-books">Popular Books</h3>
+                            <p class="stat-title">The Alchemist</p>
+                            <p class="stat-info">Borrowed 42 times</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon users-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 data-translate="active-members">Active Members</h3>
+                            <p class="stat-number">573</p>
+                            <p class="stat-info">85% of total members</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us Page -->
+            <section id="about-us" class="page">
+                <div class="page-header">
+                    <h1 data-translate="about-us-title">About Our Library</h1>
+                </div>
+
+                <div class="about-content">
+                    <div class="card">
+                        <div class="card-content">
+                            <p data-translate="about-us-content">
+                                Welcome to our library management system. We are dedicated to providing a seamless experience for managing books, members, and borrowing activities. Our system is designed to help librarians and administrators efficiently manage library resources and provide better service to library members.
+                            </p>
+
+                            <div class="about-features">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <h3>10,000+</h3>
+                                    <p>Books in Collection</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3>2,500+</h3>
+                                    <p>Active Members</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </div>
+                                    <h3>1,200+</h3>
+                                    <p>Monthly Loans</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h3>24/7</h3>
+                                    <p>Online Access</p>
+                                </div>
+                            </div>
+
+                            <div class="about-team">
+                                <h2>Our Team</h2>
+                                <div class="team-members">
+                                    <div class="team-member">
+                                        <img src="https://via.placeholder.com/150" alt="Team Member">
+                                        <h3>Khalid Elabd</h3>
+                                        <p></p>
+                                    </div>
+                                    <div class="team-member">
+                                        <img src="https://via.placeholder.com/150" alt="Team Member">
+                                        <h3>Ahmed Ramzy</h3>
+                                        <p></p>
+                                    </div>
+                                    <div class="team-member">
+                                        <img src="https://via.placeholder.com/150" alt="Team Member">
+                                        <h3>Marwa Sami</h3>
+                                        <p></p>
+                                    </div>
+                                    <div class="team-member">
+                                        <img src="https://via.placeholder.com/150" alt="Team Member">
+                                        <h3>Wafaa Gamal</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Page -->
+            <section id="settings" class="page">
+                <div class="page-header">
+                    <h1 data-translate="settings">Settings</h1>
+                </div>
+
+                <div class="settings-container">
+                    <div class="settings-card">
+                        <div class="settings-header">
+                            <h3 data-translate="library-settings">Library Settings</h3>
+                        </div>
+                        <div class="settings-content">
+                            <form id="library-settings-form">
+                                <div class="form-group">
+                                    <label for="library-name" data-translate="library-name">Library Name</label>
+                                    <input type="text" id="library-name" value="My Library" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="library-address" data-translate="address">Address</label>
+                                    <input type="text" id="library-address" value="123 Library Street, City" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="library-email" data-translate="email">Email</label>
+                                    <input type="email" id="library-email" value="info@library.com" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="library-phone" data-translate="phone">Phone</label>
+                                    <input type="tel" id="library-phone" value="0123456789" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="library-website" data-translate="website">Website</label>
+                                    <input type="url" id="library-website" value="https://www.library.com" class="form-input">
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn primary-btn" data-translate="save-changes">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="settings-header">
+                            <h3 data-translate="borrowing-settings">Borrowing Settings</h3>
+                        </div>
+                        <div class="settings-content">
+                            <form id="borrowing-settings-form">
+                                <div class="form-group">
+                                    <label for="max-books" data-translate="max-books">Maximum Books Per Member</label>
+                                    <input type="number" id="max-books" value="5" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="loan-period" data-translate="loan-period">Loan Period (days)</label>
+                                    <input type="number" id="loan-period" value="14" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fine-rate" data-translate="fine-rate">Daily Fine Rate</label>
+                                    <input type="number" id="fine-rate" value="1" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="renewal-limit" data-translate="renewal-limit">Renewal Limit</label>
+                                    <input type="number" id="renewal-limit" value="2" class="form-input">
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn primary-btn" data-translate="save-changes">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="settings-header">
+                            <h3 data-translate="website-settings">Website Settings</h3>
+                        </div>
+                        <div class="settings-content">
+                            <form id="website-settings-form">
+                                <div class="form-group">
+                                    <label for="site-title" data-translate="site-title">Site Title</label>
+                                    <input type="text" id="site-title" value="My Library - Official Website" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="site-description" data-translate="site-description">Site Description</label>
+                                    <textarea id="site-description" class="form-textarea">My Library is a digital library providing a wide range of books for reading and borrowing.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="site-logo" data-translate="site-logo">Site Logo</label>
+                                    <div class="file-input-container">
+                                        <input type="file" id="site-logo" class="file-input">
+                                        <label for="site-logo" class="file-input-label" data-translate="choose-file">Choose file</label>
+                                        <span class="file-name">logo.png</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="site-theme" data-translate="site-theme">Site Theme</label>
+                                    <select id="site-theme" class="form-select">
+                                        <option value="light" data-translate="light-mode">Light</option>
+                                        <option value="dark" data-translate="dark-mode">Dark</option>
+                                        <option value="custom">Custom</option>
+                                    </select>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn primary-btn" data-translate="save-changes">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add Book Modal -->
+    <div id="add-book-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="add-new-book">Add New Book</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="add-book-form">
+                    <div class="form-group">
+                        <label for="book-title" data-translate="book-title">Book Title</label>
+                        <input type="text" id="book-title" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-author" data-translate="author">Author</label>
+                        <input type="text" id="book-author" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-category" data-translate="category">Category</label>
+                        <select id="book-category" class="form-select" required>
+                            <option value="" data-translate="select-category">Select category</option>
+                            <option value="fiction" data-translate="fiction">Fiction</option>
+                            <option value="science" data-translate="science">Science</option>
+                            <option value="history" data-translate="history">History</option>
+                            <option value="philosophy" data-translate="philosophy">Philosophy</option>
+                            <option value="psychology" data-translate="psychology">Psychology</option>
+                            <option value="self-help" data-translate="self-help">Self-Help</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-isbn" data-translate="isbn">ISBN</label>
+                        <input type="text" id="book-isbn" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-publish-date" data-translate="publish-date">Publish Date</label>
+                        <input type="date" id="book-publish-date" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-pages" data-translate="pages">Number of Pages</label>
+                        <input type="number" id="book-pages" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-language" data-translate="language">Language</label>
+                        <select id="book-language" class="form-select">
+                            <option value="arabic" data-translate="arabic">Arabic</option>
+                            <option value="english" data-translate="english">English</option>
+                            <option value="french" data-translate="french">French</option>
+                            <option value="spanish" data-translate="spanish">Spanish</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-cover" data-translate="cover-image">Cover Image</label>
+                        <div class="file-input-container">
+                            <input type="file" id="book-cover" class="file-input">
+                            <label for="book-cover" class="file-input-label" data-translate="choose-file">Choose file</label>
+                            <span class="file-name" data-translate="no-file-chosen">No file chosen</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-description" data-translate="description">Description</label>
+                        <textarea id="book-description" class="form-textarea"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn secondary-btn cancel-btn" data-translate="cancel">Cancel</button>
+                        <button type="submit" class="btn primary-btn" data-translate="add">Add Book</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Member Modal -->
+    <div id="add-member-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="add-new-member">Add New Member</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="add-member-form">
+                    <div class="form-group">
+                        <label for="member-name" data-translate="full-name">Full Name</label>
+                        <input type="text" id="member-name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="member-email" data-translate="email">Email</label>
+                        <input type="email" id="member-email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="member-phone" data-translate="phone">Phone</label>
+                        <input type="tel" id="member-phone" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="member-type" data-translate="member-type">Member Type</label>
+                        <select id="member-type" class="form-select" required>
+                            <option value="" data-translate="select-type">Select type</option>
+                            <option value="student" data-translate="student">Student</option>
+                            <option value="teacher" data-translate="teacher">Teacher</option>
+                            <option value="staff" data-translate="staff">Staff</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="member-address" data-translate="address">Address</label>
+                        <textarea id="member-address" class="form-textarea"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn secondary-btn cancel-member-btn" data-translate="cancel">Cancel</button>
+                        <button type="submit" class="btn primary-btn" data-translate="add">Add Member</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Loan Modal -->
+    <div id="add-loan-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="new-loan">New Loan</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="add-loan-form">
+                    <div class="form-group">
+                        <label for="loan-member" data-translate="member">Member</label>
+                        <select id="loan-member" class="form-select" required>
+                            <option value="" data-translate="select-member">Select member</option>
+                            <option value="1">Ahmed Hassan (ahmed@example.com)</option>
+                            <option value="2">Fatima Ali (fatima@example.com)</option>
+                            <option value="3">Mohammed Khalid (mohammed@example.com)</option>
+                            <option value="4">Layla Ibrahim (layla@example.com)</option>
+                            <option value="5">Omar Farooq (omar@example.com)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-book" data-translate="book">Book</label>
+                        <select id="loan-book" class="form-select" required>
+                            <option value="" data-translate="select-book">Select book</option>
+                            <option value="1">The Alchemist (Paulo Coelho)</option>
+                            <option value="2">1984 (George Orwell)</option>
+                            <option value="3">To Kill a Mockingbird (Harper Lee)</option>
+                            <option value="4">The Great Gatsby (F. Scott Fitzgerald)</option>
+                            <option value="5">Pride and Prejudice (Jane Austen)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-borrow-date" data-translate="borrow-date">Borrow Date</label>
+                        <input type="date" id="loan-borrow-date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-due-date" data-translate="due-date">Due Date</label>
+                        <input type="date" id="loan-due-date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-notes" data-translate="notes">Notes</label>
+                        <textarea id="loan-notes" class="form-textarea"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn secondary-btn cancel-loan-btn" data-translate="cancel">Cancel</button>
+                        <button type="submit" class="btn primary-btn" data-translate="create-loan">Create Loan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Category Modal -->
+    <div id="add-category-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="add-new-category">Add New Category</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="add-category-form">
+                    <div class="form-group">
+                        <label for="category-name" data-translate="category-name">Category Name</label>
+                        <input type="text" id="category-name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category-description" data-translate="description">Description</label>
+                        <textarea id="category-description" class="form-textarea" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="category-icon" data-translate="icon">Icon</label>
+                        <select id="category-icon" class="form-select">
+                            <option value="book">📚 Book</option>
+                            <option value="flask">🧪 Science</option>
+                            <option value="landmark">🏛️ History</option>
+                            <option value="brain">🧠 Philosophy</option>
+                            <option value="head-side-brain">🧠 Psychology</option>
+                            <option value="hand-holding-heart">❤️ Self-Help</option>
+                            <option value="graduation-cap">🎓 Education</option>
+                            <option value="palette">🎨 Art</option>
+                            <option value="music">🎵 Music</option>
+                            <option value="utensils">🍴 Cooking</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category-color" data-translate="color">Color</label>
+                        <input type="color" id="category-color" class="form-input" value="#3b82f6">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn secondary-btn cancel-category-btn" data-translate="cancel">Cancel</button>
+                        <button type="submit" class="btn primary-btn" data-translate="add">Add Category</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

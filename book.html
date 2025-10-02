@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/book.css" />
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/sadat.jpg" />
+
+   
+  </head>
+  <body>
+    <header>
+      <nav class="mainNav" id="navbar">
+        <div class="navbar-content" id="navbar-content ">
+          <ul>
+            <a href="./index.html" class="navbar-links"> <li>HOME</li></a>
+            <a href="./aboutus.html" class="navbar-links"> <li>ABOUT US</li></a>
+            <a href="./index.html#contact" class="navbar-links"
+              ><li>CONTACT US</li></a
+            >
+
+            <a href="./category.html" class="navbar-links">
+              <li>CATEGORIES</li></a
+            >
+          </ul>
+          <div>
+            <div>
+              <a class="btn" href="./login.html" id="login-btn">LOGIN</a>
+            </div>
+            <div>
+              <a class="btn-fill" href="./register.html" id="reg-btn"
+                >REGISTER</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="nav-divider" />
+      </nav>
+    </header>
+    <div id="heading"></div>
+    <div class="rectangle22" id="rectangle22">
+      <div class="book-summary">
+        <div class="bookimage">
+          <img
+            src="/images/books/placeholder.png"
+            class="topimage"
+            id="preview-image"
+          />
+        </div>
+
+        <div class="book-details">
+          <div>
+            <p class="booktitle" id="title">
+              <!--booktitle -->
+            </p>
+          </div>
+
+          <div>
+            <p class="author" id="author">
+              <!--author-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="book-description">
+      <p id="description"></p>
+    </div>
+    <div class="similar-section">
+      <h2>Similar books</h2>
+      <hr class="hr" />
+
+      <div class="similar-books" id="similar-books"><!-- similar books--></div>
+    </div>
+
+ 
+    <script src="./js/navbar.js"></script>
+    <script src="./js/book.js"></script>
+    <script>
+      window.onload = function () {
+        const title = document.getElementById("title");
+        const book_author = document.getElementById("author");
+        const preview_image = document.getElementById("preview-image");
+        const book_description = document.getElementById("description");
+        const cover = document.getElementById("rectangle22");
+
+        // update title
+
+        let parms = new URL(document.location).searchParams;
+        let book_id = parms.get("id");
+        let book = getSingleBook(book_id);
+
+        document.title = book.title;
+
+        title.innerText = book.title;
+        book_author.innerText = "Author -  " + book.author;
+        preview_image.src = book.image;
+        book_description.innerText = book.discription;
+        cover.style.backgroundImage = `linear-gradient(
+      to bottom,
+      rgba(67, 69, 77, 0.52),
+      rgba(34, 33, 34, 0.73)
+    ), url(${book.image})`;
+
+        const similarBooks = loadSimlarBooks(book_id);
+        const similar_display = document.getElementById("similar-books");
+
+        similarBooks.forEach((book) => {
+          var card = document.createElement("div");
+          card.classList.add("card");
+          similar_display.appendChild(card);
+
+          var BookImgContainer = document.createElement("div");
+          BookImgContainer.classList.add("BookImgContainer");
+          card.appendChild(BookImgContainer);
+
+          var detailView = document.createElement("div");
+          detailView.classList.add("details");
+          card.appendChild(detailView);
+
+          var bookImage = document.createElement("img");
+          bookImage.classList.add("BookImg");
+          bookImage.src = book.image;
+          BookImgContainer.appendChild(bookImage);
+
+          var name = document.createElement("p");
+          name.textContent = book.title;
+          name.classList.add("BookTitle");
+          detailView.appendChild(name);
+
+          var author = document.createElement("p");
+          author.textContent = book.author;
+          author.classList.add("BookAuthor");
+          detailView.appendChild(author);
+
+          var starView = document.createElement("div");
+          starView.classList.add("starView");
+          detailView.appendChild(starView);
+
+          for (var s = 1; s <= book.rating; s++) {
+            var star = document.createElement("img");
+            star.classList.add("star");
+            star.src = "images/search_Img/star-fill.svg";
+            starView.appendChild(star);
+          }
+
+          let emptyStars = 5 - book.rating;
+
+          for (var s = 1; s <= emptyStars; s++) {
+            var star = document.createElement("img");
+            star.classList.add("star");
+            star.src = "images/search_Img/star.svg";
+            starView.appendChild(star);
+          }
+
+          var sample = document.createElement("p");
+          sample.textContent = book.Samplediscription;
+          sample.classList.add("BookPara");
+          detailView.appendChild(sample);
+
+          var cardBtnView = document.createElement("div");
+          cardBtnView.classList.add("cardBtnView");
+          detailView.appendChild(cardBtnView);
+
+          var btn1 = document.createElement("a");
+          btn1.textContent = "View";
+          btn1.setAttribute("href", `book.html?id=${book.id}`);
+          btn1.classList.add("cardBtn", "cardBtn1");
+          cardBtnView.appendChild(btn1);
+        });
+      };
+    </script>
+  </body>
+</html>

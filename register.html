@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="responsive/register_media.css">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/sadat.jpg" />
+    
+  </head>
+
+  <body>
+    <header>
+      <nav class="mainNav" id="navbar">
+        <div class="navbar-content" id="navbar-content ">
+          <ul>
+            <a href="./index.html" class="navbar-links">
+              <li>HOME</li>
+            </a>
+            <a href="./aboutus.html" class="navbar-links">
+              <li>ABOUT US</li>
+            </a>
+            <a href="./index.html#contact" class="navbar-links">
+              <li>CONTACT US</li>
+            </a>
+
+            <a href="./category.html" class="navbar-links">
+              <li>CATEGORIES</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="cont">
+     <h1 class="k"></h1>
+      <h2>Create New Account</h2>
+      <form action="#">
+        <input class="em_b" type="email" id="ema" placeholder="Email" /> <br />
+
+        <input
+          class="pa_b"
+          type="password"
+          id="pwd2"
+          placeholder="Password"
+        /><br />
+
+        <input
+          class="re_b"
+          type="password"
+          id="re_pwd"
+          placeholder="Re-enter password"
+        /><br />
+
+        <table class="tab_s">
+          <tr>
+            <td>Birthday</td>
+            <td class="aj">Gender</td>
+          </tr>
+          <tr>
+            <td><input class="ag_b" type="date" id="n_age" /></td>
+            <td>
+              <select class="ge_b">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <div class="fix_t">
+          <input
+            class="btnnf"
+            type="submit"
+            id="sub_n1"
+            value="Register"
+            onclick="register_f()"
+          />
+          <div class="have">
+            Already have an account ?
+            <a href="./login.html" class="dfe">Login In</a>
+          </div>
+          
+        </div>
+      </form>
+    </div>
+    <div class="title-mate">
+      <h1>Central library</h1>
+      <p>
+        Our library management system is desigened to<br />
+        provide easy access to books,magazines,journals,<br />
+        frindly interface,you can search for available<br />
+        resources.
+      </p>
+    </div>
+    <script src="./js/Register.js"></script>
+  </body>
+</html>

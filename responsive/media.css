@@ -1,0 +1,107 @@
+@media (max-width: 600px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .mainNav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding: 0px;
+        margin: 0px;
+    }
+    .mainNav .register {
+        margin-bottom: 17px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .heading #typing-text {
+       font-size: 12px;
+    }
+    .heading .search-button {
+        width: 320px;
+    }
+    .mainNav {
+        padding-top: 60px;
+    }
+    .heading {
+        padding-top: 120px;
+    }
+    .header {
+        height: fit-content;
+        background-repeat: no-repeat;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;   
+    }
+    .services h1 {
+        text-align: center;
+        margin-right: 20px;
+    }
+    .serviceContent {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 40px;
+    }
+    .services {
+        height: fit-content;
+    }
+    .serviceContent a .search6 {
+        margin-bottom: 60px;
+    }
+    .aboutus {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-content-section .about-title h1 {
+        font-size: 28px;
+        font-weight: bold;
+        width: 200px;
+        text-align: center;
+        margin-left: -15px;
+    }
+    .about-content-section .about-content {
+        width: 300px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: -65px; 
+    }
+    .about-content-section button.aboutbtn {
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+    }
+    .about-content-section .social {
+        text-align: center;
+    }
+    .about-image-content {
+        width: 120%;
+    }
+    .contact-content form{
+        display: flex;   
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 390px;
+        margin-left: -60px;
+    }
+    #contact {
+        height: 800px;
+    }         
+}

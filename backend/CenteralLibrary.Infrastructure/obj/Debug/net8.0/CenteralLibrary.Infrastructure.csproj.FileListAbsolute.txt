@@ -1,0 +1,17 @@
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\bin\Debug\net8.0\CenteralLibrary.Infrastructure.deps.json
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\bin\Debug\net8.0\CenteralLibrary.Infrastructure.runtimeconfig.json
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\bin\Debug\net8.0\CenteralLibrary.Infrastructure.dll
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\bin\Debug\net8.0\CenteralLibrary.Infrastructure.pdb
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\bin\Debug\net8.0\CenteralLibrary.Domain.dll
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\bin\Debug\net8.0\CenteralLibrary.Domain.pdb
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\CenteralLibrary.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\CenteralLibrary.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\CenteralLibrary.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\CenteralLibrary.Infrastructure.AssemblyInfo.cs
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\CenteralLibrary.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\Centeral.20B81ADD.Up2Date
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\CenteralLibrary.Infrastructure.dll
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\refint\CenteralLibrary.Infrastructure.dll
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\CenteralLibrary.Infrastructure.pdb
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\CenteralLibrary.Infrastructure.genruntimeconfig.cache
+C:\Users\Ahmed Ramzy\OneDrive - Faculty of Computers & Artificial Intelligence\Desktop\CenteralLibrary-main\CenteralLibrary.Infrastructure\obj\Debug\net8.0\ref\CenteralLibrary.Infrastructure.dll

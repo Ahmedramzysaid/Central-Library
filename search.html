@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Book</title>
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/search.css" />
+
+        <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/sadat.jpg" />
+   
+  </head>
+  <body>
+    <header>
+      <nav class="mainNav" id="navbar">
+        <div class="navbar-content" id="navbar-content ">
+          <ul>
+            <a href="./index.html" class="navbar-links"> <li>HOME</li></a>
+            <a href="./aboutus.html" class="navbar-links"> <li>ABOUT US</li></a>
+            <a href="./index.html#contact" class="navbar-links"
+              ><li>CONTACT US</li></a
+            >
+
+            <a href="./category.html" class="navbar-links">
+              <li>CATEGORIES</li></a
+            >
+          </ul>
+          <div>
+            <div>
+              <a class="btn" href="./login.html" id="login-btn">LOGIN</a>
+            </div>
+            <div>
+              <a class="btn-fill" href="./register.html" id="reg-btn"
+                >REGISTER</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="nav-divider" />
+      </nav>
+    </header>
+    <div id="heading"></div>
+    <div class="mainbg">
+      <div class="darkBg">
+        <h1 class="mainTextheading">Search Books</h1>
+      </div>
+    </div>
+
+    <div class="search">
+      <form onsubmit="searchBook()">
+        <input
+          type="text"
+          class="searchInput"
+          id="searchBookInput"
+          placeholder="Type a Keyword Ex: The Prince "
+          onkeyup="searchBookOnKeyPress()"
+        />
+        <button class="search-btn" type="submit">SEARCH</button>
+      </form>
+    </div>
+
+    <div class="searchResaults" id="searchResaults">
+      <div class="search-your-book">
+        Check Wheather Your Favourite Book is in Our Library, Type Your Keyword
+        and NO NEED to PRESS Enter. I will handle it for you :)
+      </div>
+    </div>
+ 
+    <script src="./js/navbar.js"></script>
+    <script src="./js/animationScript.js"></script>
+    <script src="./js/book.js"></script>
+  </body>
+</html>
